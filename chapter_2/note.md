@@ -177,3 +177,73 @@ $
 3. ***General Solution = Particular + general of hệ thuần nhất.***
 
 - Tuy nhiên, các matrics thường cần phải trải qua bước **Gaussian elimination**, rồi mới có thể áp dụng 3 bước trên.
+
+### 2.3.2. Các phép biến đổi sơ cấp
+
+- Đặc điểm:
+    - Giữ nguyên **tập nghiệm** của hệ.
+    - Biến đổi hệ sang dạng simple hơn.
+
+- How?
+    - Đổi chỗ 2 phương trình.
+    - Multiplication với hằng số khác 0. $\lambda \in \mathbb{R} \setminus \{0\}  $
+    - Cộng 2 phương trình với nhau.
+
+- Example: Với $a \in \mathbb{R} $ Tìm tất cả nghiệm của hệ:
+
+    ![img11](img/image11.png)
+
+    - Convert ma trận gọn: $\boldsymbol{Ax=b} $
+    - Build **augmented matrix** (ma trận mở rộng): $[\boldsymbol{A|b}]$
+
+        ![img12](img/image12.png)
+
+    - Biến đổi sang hệ pt tương đương: $[\boldsymbol{A|b}] \sim [\boldsymbol{A'|b'}] $
+
+    - Sau khi biến đổi sơ cấp, ta thu được:
+        ![img13](img/image13.png)
+
+    - This matric is **row-echelon form (REF)**
+    - Suy ra được **particular and general solution**:
+        ![img14](img/image14.png)
+    - Phương pháp tìm **particular and general solution** sẽ trình bày sau.
+
+- **Nhận xét: Pivot và cấu trúc bậc thang**:
+    - **Leading coefficient** của một hàng, tức là số khác 0 đầu tiên tính từ bên trái của hàng đó, được gọi là **pivot**.
+
+- **Row-Echelon Form**:
+    - **Rows full 0** phải nằm ở dưới cùng.
+    - Pivot của below row phải nằm bên phải pivot của hàng trên.
+
+- **Basic and Free variable**:
+    ![img15](img/image15.png)
+    - **Basic variable** là các biến tương ứng với pivot trong **row-echelon form** $x_1, x_3,x_4 $.
+    - Còn lại là **free variable** $x_2, x_5 $.
+
+    - Ý nghĩa:
+        - **Basic variable** sẽ biểu diễn theo **free variable**.
+        - **Free variable** có thể nhận giá trị tùy ý.
+        - Chính các **free variable** tạo ra ***vô số nghiệm***.
+
+- **How to find Particular solution**:
+    - Dựa vào **row-echelon form**, ta biết được $x_i$ là **pivot**.
+    - Sau đó, tìm $\lambda_i $ sao cho $\sum_{i}^{p} \lambda_i.column_i(chứa \ \  pivot_i) $
+        - $p$: số lượng **pivot**.
+        - Ex:
+            ![img15](img/image15.png)
+            ![img16](img/image16.png)
+            ![img17](img/image17.png)
+        - Như vậy ta được **particular solution**: $x=[2,0,-1,1,0]^{\intercal}$
+
+- Nhận biết **Reduced Row-Echelon Form** / **row-reduced echelon form** / **row canonical form**:
+    - Nó ở **row-echelon form**.
+    - Mọi **pivot** đều bằng 1.
+    - **Pivot** là phần tử khác 0 duy nhất trong cột của nó.
+        ![img](img/image18.png)
+
+    - Vai trò:
+        - Cho phép ta xác định **general solution** của một **system of linear equation** một cách trực tiếp và rõ ràng.
+
+- **Gaussian Elimination**:
+    - Là algorithm thực hiện các **elemantary transformations** để đưa **system of linear equation** về **reduced row-echelon form**.
+
