@@ -247,3 +247,29 @@ $
 - **Gaussian Elimination**:
     - Là algorithm thực hiện các **elemantary transformations** để đưa **system of linear equation** về **reduced row-echelon form**.
 
+### 2.3.3 The Minus-Trick
+
+- "Mẹo" thực tế để đọc trực tiếp nghiệm $x $ của **homogeneous system**: $\boldsymbol{Ax=0} $:
+    - Trong đó: $\boldsymbol{A} \in \mathbb{R}^{k \times n} $, $x \in \mathbb{R}^n $.
+
+    - First, equation phải có dạng **reduce row-echelon form (RREF)**.
+    - Add $n-k $ rows để matrix có dạng $(n,n) $
+        - row: $[0 ... 0 -1\ \ 0...0] $
+        - Sao cho đường chéo chính only 1 or -1.
+
+    - Lúc này, nghiệm chính là các cột chứa $pivot=-1$
+        - Các cột này là **basis** của **không gian nghiệm** của $\boldsymbol{Ax=0} $.
+
+    - Ex: Cho $\boldsymbol{A} $ đã có dạng RREF:
+        ![img](img/image19.png)
+    - Thêm các row $[0 ... 0 -1\ \ 0...0] $ sao cho A vuông:
+        ![img](img/image20.png)
+    - Lấy các column chứa $pivot=-1$ trên đường chéo:
+        ![img](img/image21.png)
+
+- **Calculating the Inverse**:
+    - Ta sử dụng **augumented matrix notation**:$$ [\boldsymbol{A|I_n}] $$
+    - và dùng Gaussian elimination biến đổi thành: $$[\boldsymbol{I_n|A^{-1}}] $$
+
+### 2.3.4 Algorithms for Solving a System of Linear Equations
+...
