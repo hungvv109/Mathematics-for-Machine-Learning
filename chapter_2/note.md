@@ -272,4 +272,27 @@ $
     - và dùng Gaussian elimination biến đổi thành: $$[\boldsymbol{I_n|A^{-1}}] $$
 
 ### 2.3.4 Algorithms for Solving a System of Linear Equations
-...
+- Giải hệ *(Giả sử hệ tồn tại nghiệm)* có dạng: $$\boldsymbol{Ax=b} $$
+
+1. Nếu hệ **không có nghiệm chính xác**, ta cần tìm ***approximate solutions***. (Có thể dùng **linear regression**).
+
+2. Ý tưởng dùng **inverse matrix**, khi đó nghiệm: $$\boldsymbol{x = A^{-1}b} $$
+
+    - Nhưng cách này chỉ dùng được khi **A is square matrix** và tồn tại **inverse matrix**. Thực tế thì khác!.
+
+3. Nếu các column của $\boldsymbol{A}$ **linearly independent** thì có thể biến đổi: $$\boldsymbol{A}^{\top}Ax = \boldsymbol{A}^{\top}b \\ \rightarrow \boldsymbol{x = (A^{\top}A)^{-1}A^{\top}b} $$ 
+    - $\boldsymbol{(A^{\top}A)^{-1}}A^{\top} $ gọi là **Moore–Penrose pseudo-inverse**.
+    - Nhưng nhược điểm **tốn nhiều tài nguyên tính toán**.
+
+4. **Gaussian Elimination**
+    - Nếu hệ có **hàng triệu biến** thì Gaussian Elimination trở  nên không thực tế $O(n^3) $.
+    - Thực tế, các hệ lớn thường giải bằng **iterative methods**.
+
+5. **Iterative methods**
+    - Giả sử $\boldsymbol{x^*} $ là nghiệm thật của $\boldsymbol{Ax=b} $
+    - Các method iterative sẽ tìm ra dãy nghiệm gần đúng: $\boldsymbol{x^{(0)},x^{(1)},x^{(2)}},... $ theo công thức: $$\boldsymbol{x^{(k+1)} = Cx^{(k)} + d} $$
+        - $\boldsymbol{C}:$ matrix điểu khiển cách cập nhật.
+        - $\boldsymbol{d}: $ vector hằng số.
+    - Mục tiêu:
+        - Qua mỗi lần lặp, sai số $||\boldsymbol{x^{k+1} - x_*} || $ sẽ giảm dần.
+        - Finally $\boldsymbol{x^{k} \rightarrow x_* } $
