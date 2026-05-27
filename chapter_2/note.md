@@ -296,3 +296,31 @@ $
     - Mục tiêu:
         - Qua mỗi lần lặp, sai số $||\boldsymbol{x^{k+1} - x_*} || $ sẽ giảm dần.
         - Finally $\boldsymbol{x^{k} \rightarrow x_* } $
+
+## 2.4 Vector Spaces
+
+- **Vector space**: 1 **không gian có cấu trúc** nơi vector "sống" trong đó.
+
+### 2.4.1 Groups
+
+- Xét 1 set $\mathcal{G} $ và 1 phép toán $\otimes :\mathcal{G} \times \mathcal{G} \rightarrow \mathcal{G} $.
+- Khi đó $\mathcal{G} := (\mathcal{G}, \otimes) $ được gọi là **group** nếu thỏa mãn:
+    1. **Closure** (tính đóng):
+        - $ \forall x, y \in \mathcal{G} : x \otimes y \in \mathcal{G} $
+
+    2. **Associativity** (tính kết hợp):
+        - $\forall x, y, z \in \mathcal{G} : (x \otimes y) \otimes z = x \otimes (y \otimes z) $
+
+    3. **Neutral element**:
+        - $\exists e \in \mathcal{G} $ sao cho $x \otimes e = x $ and $e \otimes x = x $
+
+    4. **Inverse elements**:
+        - $\exists x \in \mathcal{G}, \exists y \in \mathcal{G} $ sao cho $x \otimes y = e $ and $y \otimes x = e $.
+        - Thường viết $x^{-1} $ là inverse của x.
+
+- **Abelian group**: 
+    - If $x \otimes y = y \otimes x $ with $\forall x,y \in \mathcal{G} $ then $\mathcal{G} := (\mathcal{G}, \otimes) $ is an **Abelian group**.
+
+- Trong trường hợp mọi matrix đều có inverse thì gọi là **General Linear Group**.
+
+- Tất cả inverse matrix $\boldsymbol{A} \in \mathbb{R}^{n \times n} $ tạo thành 1 group dưới phép nhân matrix, group này là $GL(n, \mathbb{R}) $.
