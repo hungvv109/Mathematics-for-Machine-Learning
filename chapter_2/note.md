@@ -324,3 +324,20 @@ $
 - Trong trường hợp mọi matrix đều có inverse thì gọi là **General Linear Group**.
 
 - Tất cả inverse matrix $\boldsymbol{A} \in \mathbb{R}^{n \times n} $ tạo thành 1 group dưới phép nhân matrix, group này là $GL(n, \mathbb{R}) $.
+
+### 2.4.2 Vector Spaces
+
+- Vector space $V = (\mathcal{V}, +, .)$:
+    ![alt text](img/image22.png)
+
+- Điều kiện:
+    - $(\mathcal{V}, +) $ là một **Abelian group**.
+        - Có vector 0.
+        - Có vector đối.
+        - Giao hoán.
+        - Kết hợp.
+    - **Distributivity**:
+        ![alt text](img/image23.png)
+    - **Associativity**:
+        ![alt text](img/image24.png)
+    - **Neutral element**.
