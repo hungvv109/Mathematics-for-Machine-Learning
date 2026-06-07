@@ -341,3 +341,14 @@ $
     - **Associativity**:
         ![alt text](img/image24.png)
     - **Neutral element**.
+
+### 2.4.3 Vector Subspaces
+
+- Cho $V = (\mathcal{V,+,. }) $ is a vector space.
+- Cho $U \subseteq V,\ \ \mathcal{U} \ne \emptyset $.
+- Khi đó, $U = (\mathcal{U}, +, .) $ is a **vector subspace** of $V$.
+
+- Điều kiện:
+    - $U$ không được $\emptyset$. $0 \in U $
+    - $U$ phải **closed** với mọi phép toán.
+    
