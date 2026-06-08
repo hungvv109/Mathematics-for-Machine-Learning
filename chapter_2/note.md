@@ -351,4 +351,53 @@ $
 - Điều kiện:
     - $U$ không được $\emptyset$. $0 \in U $
     - $U$ phải **closed** với mọi phép toán.
-    
+
+## 2.5 Linear Independence
+- **Linear Independence**: Trong 1 nhóm các vector không có vector nào thừa (vector thừa -> được tạo ra từ các vector)
+- **Linear combination**: Lấy vector, nhân với số, rồi cộng lại.
+    ![alt text](img/image25.png)
+
+- Chỉ có **trivial solution** -> **independence**.
+- Ngược lại -> **dependence**.
+
+- Khi có quá nhiều vector, ta cho chúng $A = [{x_1, x_2, x_3,...}] $, khử Gausian, nếu cột nào cx có pivot thì **independence**, không thì **dependence**.
+
+## 2.6 Basis and Rank
+
+### 2.6.1 Generating Set and Basis
+- Nếu 2 vector nào đó mà có thể tạo ra vô số vector, thì 2 vector đó là **basis**.
+    ![alt text](img/image26.png)
+
+- **Span** của một tập vector là tất cả những vector có thể tạo ra bằng cách nhân rồi cộng các vector trong tập đó.
+
+    ![alt text](img/image27.png)
+
+- Một tập vector được gọi là **generating set** nếu nó tạo ra được toàn bộ không gian đang xét.
+
+    ![alt text](img/image28.png)
+    ![alt text](img/image29.png)
+
+- Basis là 1 generating set nhưng không có vector thừa, **là bộ vector tối thiểu nhưng đủ để tạo ra cả không gian.**
+
+- Một space có nhiều basis.
+
+    ![alt text](img/image30.png)
+
+- **Dimension** là số vector trong một basis.
+
+- Cách tìm basis bằng **Gaussian elimination**:
+    ![alt text](img/image31.png)
+
+- **Rank** là số pivot columns của ma trận.
+    - $rank(A) = x = dim(U)$
+    - Rank cũng chính là dimension của không gian được span bởi các cột.
+
+### 2.6.2 Rank
+
+- Rank của ma trận = số lượng “thông tin thật sự độc lập” trong ma trận.
+- Dù ta đếm thông tin theo hàng hay theo cột, kết quả rank vẫn giống nhau.
+
+- Rank cho biết ma trận này thực sự có bao nhiêu chiều thông tin độc lập.
+
+## 2.7 Linear Mappings
+...
