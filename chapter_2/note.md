@@ -92,7 +92,6 @@
 
 - **Definition:** Cho $\bold{A} \in \mathbb{R}^{n \times n} $, giả sử cho $\bold{B} $ sao cho $\bold{A}\bold{B}= \bold{I}_n = \bold{B}\bold{A} $.
     - Lúc này $\bold{B} $ gọi là **inverse** của $\bold{A} $. KH: $\bold{A}^{-1} $
-
 - Không phải **matrix** nào cũng có **inverse matrix**.
     - Nếu tồn tại **inverse**, thì $\bold{A} $ gọi là ***regular / invertible / nonsingular***. Và nó là *duy nhất*
     - Nếu không, gọi là ***singular / noninvertible***.
@@ -400,4 +399,14 @@ $
 - Rank cho biết ma trận này thực sự có bao nhiêu chiều thông tin độc lập.
 
 ## 2.7 Linear Mappings
-...
+
+![alt text](img/image32.png)
+
+![alt text](img/image33.png)
+
+![alt text](img/image34.png)
+
+![alt text](img/image35.png)
+
+![alt text](img/image36.png)
+
