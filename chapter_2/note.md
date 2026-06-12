@@ -410,3 +410,15 @@ $
 
 ![alt text](img/image36.png)
 
+### 2.7.1 Matrix representation of Linear Mappings
+
+![alt text](img/image37.png)
+
+![alt text](img/image38.png)
+
+![alt text](img/image40.png)
+
+### 2.7.2 Basis Change
+
+![alt text](img/image41.png)
+
